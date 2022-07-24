@@ -3,24 +3,6 @@ import logo from "./logo.svg";
 import "./App.css";
 import { Agent, useSDS } from "./sds";
 
-interface SwarmListProps<Hyp> {
-  swarm: Agent<Hyp>[];
-}
-
-function SwarmList<Hyp>(props: SwarmListProps<Hyp>) {
-  return (
-    <ul>
-      {props.swarm
-        .filter((agent) => agent.active)
-        .map(({ hyp, active, id }, i) => (
-          <li key={id}>
-            Agent {id}. Hyp: {`${hyp}`}, Active: {active ? "true" : "false"}
-          </li>
-        ))}
-    </ul>
-  );
-}
-
 const initSwarm: Agent<number>[] = [
   { active: true, id: 0, hyp: 0 },
   { active: true, id: 1, hyp: 1 },
