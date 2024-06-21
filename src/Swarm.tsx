@@ -1,3 +1,4 @@
+import {Agent} from "./sds";
 interface SwarmListProps<Hyp> {
   swarm: Agent<Hyp>[];
 }

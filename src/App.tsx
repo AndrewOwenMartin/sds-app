@@ -27,11 +27,11 @@ const randomMicrotest = () => {
   return microtest;
 };
 
-function randomAgent<Hyp>(swarm: Agent<Hyp>[]){
+function randomAgent<Hyp>(swarm: Agent<Hyp>[]) {
   return swarm[Math.floor(Math.random() * swarm.length)];
 }
 
-function randomHyp(searchSpace: string){
+function randomHyp(searchSpace: string) {
   return Math.floor(Math.random() * searchSpace.length);
 }
 
@@ -46,7 +46,7 @@ function App() {
     searchSpace,
     randomMicrotest,
     () => randomHyp(searchSpace),
-    randomAgent,
+    randomAgent
   );
   return (
     <div>
